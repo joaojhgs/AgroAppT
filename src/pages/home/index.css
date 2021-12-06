@@ -1,0 +1,41 @@
+.homeBody {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-top: 10px;
+}
+.searchBar {
+    min-width: 40% !important;
+    max-width: 50% !important;
+}
+
+.destaquesH1 {
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100%;
+    margin-top: 10px;
+    align-content: center;
+}
+
+.carousel {
+    display: block;
+    width: 40%;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    background-color: #31271f;
+}
+.carousel .items {
+    margin-top: 10%;
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center;
+}
+
+.contentStyle {
+    height: '160px';
+    color: '#fff';
+    background: '#364d79';
+}
