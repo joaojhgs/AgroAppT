@@ -1,17 +1,27 @@
-import {Avatar, Input, Carousel, Typography, Layout} from 'antd';
+import { useState } from 'react';
+import {Avatar, Input, Carousel, Drawer, Space, Button, Typography, Layout} from 'antd';
 import '@ant-design/icons';
 import Header from '../../components/Header'
 import { MenuOutlined, UserOutlined } from '@ant-design/icons'
 import './index.css'
 
 const Home = () => {
+
+    const [visible, setVisible] = useState(false);
+    const showDrawer = () => {
+        setVisible(true);
+    };
+
+    const onClose = () => {
+        setVisible(false);
+    };
     return (
         <>
             <Header
                 className="site-page-header"
                 title="Home"
                 backIcon={<MenuOutlined />}
-                onBack={() => { } }
+                onBack={showDrawer}
                 extra={
                     <Avatar size={50} icon={<UserOutlined />} />
                 }
@@ -44,6 +54,17 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
+            <Drawer
+                title="Drawer with extra actions"
+                placement="left"
+                width={500}
+                onClose={onClose}
+                visible={visible}
+            >
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+      </Drawer>
         </>
     );
 }
