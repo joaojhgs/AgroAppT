@@ -6,8 +6,7 @@
     margin-top: 10px;
 }
 .searchBar {
-    min-width: 40% !important;
-    max-width: 50% !important;
+    min-width: 90% !important;
 }
 
 .destaquesH1 {
@@ -19,23 +18,46 @@
     align-content: center;
 }
 
+.products {
+    height: fit-content;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 0.5px;
+    text-align:center;
+}
+.vendedores {
+    margin-top: 10px;
+    height: fit-content;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 0.5px;
+    text-align:center;
+}
 .carousel {
     display: block;
-    width: 40%;
-    height: 300px;
+    min-width: 40%;
+    max-width: 90%;
     align-items: center;
     justify-content: center;
-    background-color: #31271f;
 }
 .carousel .items {
-    margin-top: 10%;
+    margin-top: 2%;
     display: flex !important;
     justify-content: center !important;
     align-content: center;
 }
+.carousel .items .itemImage{
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+    border-style: solid;
+}
 
-.contentStyle {
-    height: '160px';
-    color: '#fff';
-    background: '#364d79';
+.carousel .items .itemCard {
+    background-color: inherit;
+    text-align:center;
+}
+
+.carousel .items .itemCard h2{
+    color: black;
 }
