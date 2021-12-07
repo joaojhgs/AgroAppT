@@ -61,3 +61,19 @@
 .carousel .items .itemCard h2{
     color: black;
 }
+
+.menu {
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.ant-drawer-content-wrapper {
+    padding: 0px;
+    max-width: max-content;
+}
+.ant-drawer-body {
+    padding: 0px !important;
+}

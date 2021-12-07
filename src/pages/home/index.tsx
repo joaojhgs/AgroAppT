@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import {Avatar, Input, Carousel, Drawer, Card, Space, Button, Typography, Layout} from 'antd';
+import {Avatar, Input, Carousel, Drawer, Card, Menu} from 'antd';
 import '@ant-design/icons';
 import Header from '../../components/Header'
-import { MenuOutlined, UserOutlined, ShopOutlined } from '@ant-design/icons'
+import { MenuOutlined, UserOutlined, ShopOutlined, HistoryOutlined, CarOutlined } from '@ant-design/icons'
 import './index.css'
+import {productsDestaque, productsDestaque2, vendedoresDestaque, vendedoresDestaque2} from '../../data'
 
 const Home = () => {
 
@@ -36,156 +37,115 @@ const Home = () => {
                 <div className="carousel">
                     <div className="products">
                         <h1>Products</h1>
-                        <Carousel autoplay dots={false} dotPosition="top">
+                            <Carousel dots={false} dotPosition="top">
+                                <div className="items">
+                                    {
+                                    productsDestaque.map(product => (
+                                        
+                                        <Card hoverable bordered={false} className="itemCard">
+                                            <img alt={product.name} className="itemImage" src={product.img}/>
+                                            <h2>{product.name}</h2>
+                                        </Card>
+                                    ))
+                                    }
+                                </div>
+                                <div className="items">
+                                    {
+                                    productsDestaque2.map(product => (
+                                        
+                                        <Card hoverable bordered={false} className="itemCard">
+                                            <img alt={product.name} className="itemImage" src={product.img}/>
+                                            <h2>{product.name}</h2>
+                                        </Card>
+                                    ))
+                                    }
+                                </div>
+                            </Carousel>
+                            <Carousel dots={false} dotPosition="top">
                             <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            </div>
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            </div>
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            </div>
-                        </Carousel>
-                        <Carousel autoplay dots={false} dotPosition="top">
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            </div>
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            </div>
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://img.elo7.com.br/product/zoom/27DBE8F/essencia-maca-vermelha-100-ml-essencia-saboaria.jpg"/>
-                                <h2>Maça</h2>
-                            </Card>
-                            </div>
-                        </Carousel>
+                                    {
+                                    productsDestaque2.map(product => (
+                                        
+                                        <Card hoverable bordered={false} className="itemCard">
+                                            <img alt={product.name} className="itemImage" src={product.img}/>
+                                            <h2>{product.name}</h2>
+                                        </Card>
+                                    ))
+                                    }
+                                </div>
+                                <div className="items">
+                                    {
+                                    productsDestaque.map(product => (
+                                        
+                                        <Card hoverable bordered={false} className="itemCard">
+                                            <img alt={product.name} className="itemImage" src={product.img}/>
+                                            <h2>{product.name}</h2>
+                                        </Card>
+                                    ))
+                                    }
+                                </div>
+                            </Carousel>
                     </div>
                 </div>
                 <div className="carousel">
                     <div className="vendedores">
                         <h1>Vendedores</h1>
-                        <Carousel autoplay dots={false} dotPosition="top">
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            </div>
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            </div>
-                            <div className="items">
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            <Card hoverable bordered={false} className="itemCard">
-                                <img className="itemImage" src="https://fortatacadista.vteximg.com.br/arquivos/ids/161426-800-800/PERA-IMPORTADA-KG---683590.jpg?v=637437446242530000"/>
-                                <h2>Pera</h2>
-                            </Card>
-                            </div>
+                        <Carousel dots={false} dotPosition="top">
+                        <div className="items">
+                                    {
+                                    vendedoresDestaque.map(vendedor => (
+                                        
+                                        <Card hoverable bordered={false} className="itemCard">
+                                            <img alt={vendedor.name} className="itemImage" src={vendedor.img}/>
+                                            <h2>{vendedor.name}</h2>
+                                        </Card>
+                                    ))
+                                    }
+                                </div>
+                                <div className="items">
+                                    {
+                                    vendedoresDestaque2.map(vendedor => (
+                                        
+                                        <Card hoverable bordered={false} className="itemCard">
+                                            <img alt={vendedor.name} className="itemImage" src={vendedor.img}/>
+                                            <h2>{vendedor.name}</h2>
+                                        </Card>
+                                    ))
+                                    }
+                                </div>
                         </Carousel>
                     </div>
                 </div>
             </div>
             <Drawer
-                title="Drawer with extra actions"
+                title="Menu"
                 placement="left"
                 width={500}
                 onClose={onClose}
                 visible={visible}
+                style={{padding: "0px", maxWidth: "max-content"}}
             >
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+            <div className="menu"> 
+                <Avatar size={200} icon={<UserOutlined />} />
+                <Menu
+                    style={{marginTop: "5px", width: "100%" }}
+                    defaultSelectedKeys={['1']}
+                    defaultOpenKeys={['sub1']}
+                >
+                    <Menu.Item key="1" icon={<UserOutlined />}>
+                    Meu Perfil
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<ShopOutlined />}>
+                    Meus Produtos
+                    </Menu.Item>
+                    <Menu.Item key="3" icon={<HistoryOutlined />}>
+                    Historico de compras
+                    </Menu.Item>
+                    <Menu.Item key="4" icon={<CarOutlined />}>
+                    Transportadoras
+                    </Menu.Item>
+                </Menu>
+            </div>
       </Drawer>
         </>
     );
