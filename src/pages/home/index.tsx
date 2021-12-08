@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import {Avatar, Input, Carousel, Drawer, Card, Menu} from 'antd';
+import {Avatar, Input, Carousel, Drawer, Card, Menu, AutoComplete} from 'antd';
 import '@ant-design/icons';
-import Header from '../../components/Header'
+import Header from '../../components/Header';
 import { MenuOutlined, UserOutlined, ShopOutlined, HistoryOutlined, CarOutlined } from '@ant-design/icons'
 import './index.css'
-import {productsDestaque, productsDestaque2, vendedoresDestaque, vendedoresDestaque2} from '../../data'
+import {products, productsDestaque, productsDestaque2, vendedoresDestaque, vendedoresDestaque2} from '../../data'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -28,8 +29,18 @@ const Home = () => {
                 }
             />
             <div className="homeBody">
-                <div className="searchBar">
-                    <Input.Search />
+                <div className="md:64 searchBar flex justify-center">
+                <AutoComplete
+                    options={products.map(product => ({
+                        value: product.name,
+                    }))}
+                    filterOption={(inputValue, option) =>
+                    option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                    }
+                    className="w-full"
+                >
+                    <Input.Search onSearch={() => alert("teste")} />
+                </AutoComplete>
                 </div>
                 <div className="destaquesH1">
                     <h2 >Destaques da Semana</h2>

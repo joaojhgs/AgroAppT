@@ -1,7 +1,8 @@
 import React from 'react';
 import Home from './pages/home';
-import "antd/dist/antd.css";
+import Search from './pages/search';
 // import Localization from './pages/localization'
+import "antd/dist/antd.css";
 import {BrowserRouter as Router, Route, Switch} from '../node_modules/react-router-dom';
 
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path="/" component={Home}/>
+        <Route exact path="/search" component={Search}/>
       </Router>
     </div>
   );
