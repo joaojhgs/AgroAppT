@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {Avatar, Input, Carousel, Drawer, Card, Menu, AutoComplete} from 'antd';
 import '@ant-design/icons';
 import Header from '../../components/Header';
-import { MenuOutlined, UserOutlined, ShopOutlined, HistoryOutlined, CarOutlined } from '@ant-design/icons'
+import { MenuOutlined, UserOutlined, ShopOutlined, HistoryOutlined, CarOutlined, PlusCircleOutlined } from '@ant-design/icons'
 import './index.css'
 import {products, productsDestaque, productsDestaque2, vendedoresDestaque, vendedoresDestaque2} from '../../data'
 import { useHistory } from 'react-router-dom';
@@ -40,7 +40,7 @@ const Home = () => {
                     }
                     className="w-full"
                 >
-                    <Input.Search onSearch={() => history.push('AgroAppT/search')} />
+                    <Input.Search onSearch={() => history.push('/AgroAppT/search')} />
                 </AutoComplete>
                 </div>
                 <div className="destaquesH1">
@@ -128,6 +128,10 @@ const Home = () => {
                         </Carousel>
                     </div>
                 </div>
+            </div>
+            <div className="bg-green-800 h-16 w-full bottom-0 fixed flex justify-center justify-around">
+                <Avatar size={70} style={{ backgroundColor: 'inherit' }} icon={<ShopOutlined />} />
+                <Avatar size={70} style={{ backgroundColor: 'inherit' }} icon={<PlusCircleOutlined />} />
             </div>
             <Drawer
                 title="Menu"
