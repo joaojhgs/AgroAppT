@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/AgroAppT/static/css/main.b60cb453.chunk.css",
+    "main.js": "/AgroAppT/static/js/main.76d9ac63.chunk.js",
+    "main.js.map": "/AgroAppT/static/js/main.76d9ac63.chunk.js.map",
+    "runtime-main.js": "/AgroAppT/static/js/runtime-main.a1e9e165.js",
+    "runtime-main.js.map": "/AgroAppT/static/js/runtime-main.a1e9e165.js.map",
+    "static/css/2.9aca9020.chunk.css": "/AgroAppT/static/css/2.9aca9020.chunk.css",
+    "static/js/2.149e9657.chunk.js": "/AgroAppT/static/js/2.149e9657.chunk.js",
+    "static/js/2.149e9657.chunk.js.map": "/AgroAppT/static/js/2.149e9657.chunk.js.map",
+    "static/js/3.4f45dab7.chunk.js": "/AgroAppT/static/js/3.4f45dab7.chunk.js",
+    "static/js/3.4f45dab7.chunk.js.map": "/AgroAppT/static/js/3.4f45dab7.chunk.js.map",
+    "index.html": "/AgroAppT/index.html",
+    "static/css/2.9aca9020.chunk.css.map": "/AgroAppT/static/css/2.9aca9020.chunk.css.map",
+    "static/css/main.b60cb453.chunk.css.map": "/AgroAppT/static/css/main.b60cb453.chunk.css.map",
+    "static/js/2.149e9657.chunk.js.LICENSE.txt": "/AgroAppT/static/js/2.149e9657.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a1e9e165.js",
+    "static/css/2.9aca9020.chunk.css",
+    "static/js/2.149e9657.chunk.js",
+    "static/css/main.b60cb453.chunk.css",
+    "static/js/main.76d9ac63.chunk.js"
+  ]
+}
