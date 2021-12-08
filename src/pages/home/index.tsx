@@ -5,10 +5,11 @@ import Header from '../../components/Header';
 import { MenuOutlined, UserOutlined, ShopOutlined, HistoryOutlined, CarOutlined } from '@ant-design/icons'
 import './index.css'
 import {products, productsDestaque, productsDestaque2, vendedoresDestaque, vendedoresDestaque2} from '../../data'
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
 
+    const history = useHistory();
     const [visible, setVisible] = useState(false);
     const showDrawer = () => {
         setVisible(true);
@@ -39,7 +40,7 @@ const Home = () => {
                     }
                     className="w-full"
                 >
-                    <Input.Search onSearch={() => alert("teste")} />
+                    <Input.Search onSearch={() => history.push('AgroAppT/search')} />
                 </AutoComplete>
                 </div>
                 <div className="destaquesH1">

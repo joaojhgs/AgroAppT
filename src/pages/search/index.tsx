@@ -7,7 +7,7 @@ const Search = () => {
         <>
         <Header
             className="site-page-header"
-            title="Home"
+            title="Search"
             backIcon={<ArrowLeftOutlined />}
             onBack={() => window.history.back()}
             extra={<Avatar size={50} icon={<UserOutlined />} />} 
